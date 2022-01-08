@@ -1,0 +1,43 @@
+input[type='checkbox']:checked,
+input[type='checkbox']:not(:checked){
+    position: absolute
+}
+input[type='checkbox']:checked + label,
+input[type='checkbox']:not(:checked) + label{
+    display: inline-block
+		position: relative
+		padding-left: 28px
+		cursor: pointer
+}
+
+input[type='checkbox']:checked::before,
+input[type='checkbox']:not(:checked)::before{
+    content: ""
+		position: absolute
+		left: 0px
+		top: 0px
+		width: 18px
+		height: 18px
+		border: 1px solid #dddddd
+		background-color: #ffffff
+}		
+input[type='checkbox']:checked::after{
+    content: ""
+		position: absolute
+		-webkit-transition: all 0.2s ease
+		-moz-transition: all 0.2s ease
+		-o-transition: all 0.2s ease
+		transition: all 0.2s ease
+		left: 3px
+		top: 4px
+		width: 10px
+		height: 5px
+		border-radius: 1px
+		border-left: 4px solid #000
+		border-bottom: 4px solid #000
+		transform: rotate(-45deg)
+		-webkit-transform: rotate(-45deg)
+		-moz-transform: rotate(-45deg)
+		-o-transform: rotate(-45deg)
+		-ms-transform: rotate(-45deg)
+}		
